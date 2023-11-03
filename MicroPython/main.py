@@ -56,7 +56,6 @@ class HCSR04:
 
 # variables
 sonar = HCSR04()
-distance_to_object = 0
 sonar.distance_mm = sonar.distance_mm() / 10
 
 # cleanup
@@ -67,15 +66,20 @@ np[2] = (0, 0, 0)
 np[3] = (0, 0, 0)
 np.show()
 
-while sonar.distance_mm() < 10:
-    np[0] = (1, 0, 0)
-    np[1] = (1, 0, 0)
-    np[2] = (1, 0, 0)
-    np[3] = (1, 0, 0)
-    np.show()
-else:
-    np[0] = (1, 0, 0)
-    np[1] = (1, 0, 0)
-    np[2] = (1, 0, 0)
-    np[3] = (1, 0, 0)
-    np.show()
+while True:
+        display.clear()
+        display.scroll(sonar.distance_mm())
+        if sonar.distance_mm() < 10:
+            np[0] = (255, 0, 0)
+            np[1] = (255, 0, 0)
+            np[2] = (255, 0, 0)
+            np[3] = (255, 0, 0)
+            np.show()
+
+        else:
+            np[0] = (0, 255, 0)
+            np[1] = (0, 255, 0)
+            np[2] = (0, 255, 0)
+            np[3] = (0, 255, 0)
+            np.show()
+
