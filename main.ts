@@ -18,7 +18,7 @@ neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
-basic.forever (function() {
+basic.forever ( function () {
   // find distance between
   basic.clearScreen()
   distanceToObject = sonar.ping(
