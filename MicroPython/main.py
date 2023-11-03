@@ -67,19 +67,18 @@ np[3] = (0, 0, 0)
 np.show()
 
 while True:
-        display.clear()
-        display.scroll(sonar.distance_mm())
-        if sonar.distance_mm() < 10:
-            np[0] = (255, 0, 0)
-            np[1] = (255, 0, 0)
-            np[2] = (255, 0, 0)
-            np[3] = (255, 0, 0)
-            np.show()
+    display.clear()
+    display.scroll(sonar.distance_mm())
+    if sonar.distance_mm() < 10:
+        np[0] = (255, 0, 0)
+        np[1] = (255, 0, 0)
+        np[2] = (255, 0, 0)
+        np[3] = (255, 0, 0)
+        np.show()
 
-        else:
-            np[0] = (0, 255, 0)
-            np[1] = (0, 255, 0)
-            np[2] = (0, 255, 0)
-            np[3] = (0, 255, 0)
-            np.show()
-
+    else:
+        np[0] = (0, 255, 0)
+        np[1] = (0, 255, 0)
+        np[2] = (0, 255, 0)
+        np[3] = (0, 255, 0)
+        np.show()
